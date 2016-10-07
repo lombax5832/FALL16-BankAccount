@@ -6,11 +6,13 @@ BankAccount::BankAccount(double initialBalance, int initialAccountNumber) {
   setAccountNumber(initialAccountNumber);
 }
 
-double BankAccount::withdrawFunds(double toWithdraw) {
+bool BankAccount::withdrawFunds(double toWithdraw) {
   return 0.0;
 }
 
 void BankAccount::depositFunds(double toDeposit) {
+  if (toDeposit > 0)
+    setBalance(getBalance() + toDeposit);
 }
 
 void BankAccount::setAccountNumber(int newAccountNumber) {
@@ -22,7 +24,7 @@ int BankAccount::getAccountNumber() const {
 }
 
 double BankAccount::getBalance() const {
-  return 0.0;
+  return balance;
 }
 
 void BankAccount::printInfo() const {
