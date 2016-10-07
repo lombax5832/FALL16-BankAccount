@@ -6,7 +6,7 @@ public:
   double withdrawFunds(double toWithdraw);
   void depositFunds(double toDeposit);
 
-  void setAccountNumber(int);
+  void setAccountNumber(int newAccountNumber);
 
   int getAccountNumber() const;
   double getBalance() const;
@@ -15,4 +15,6 @@ public:
 private:
   int accountNumber;
   double balance;
+
+  void setBalance(int newBalance);
 };
