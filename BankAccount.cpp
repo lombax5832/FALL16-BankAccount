@@ -7,12 +7,18 @@ BankAccount::BankAccount(double initialBalance, int initialAccountNumber) {
 }
 
 bool BankAccount::withdrawFunds(double toWithdraw) {
-  return 0.0;
+  if (getBalance() < toWithdraw) {
+    return false;
+  } else {
+    setBalance(getBalance() - toWithdraw);
+    return true;
+  }
 }
 
 void BankAccount::depositFunds(double toDeposit) {
-  if (toDeposit > 0)
+  if (toDeposit > 0) {
     setBalance(getBalance() + toDeposit);
+  }
 }
 
 void BankAccount::setAccountNumber(int newAccountNumber) {
