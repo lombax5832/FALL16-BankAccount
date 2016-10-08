@@ -1,4 +1,4 @@
-#pragma once
+using namespace std;
 class BankAccount {
 public:
   BankAccount(double initialBalance = 0, int initialAccountNumber = 0);
@@ -29,4 +29,5 @@ private:
   double balance;
 
   void setBalance(int newBalance);
+  void toOstream(ostream &ostrm) const;
 };

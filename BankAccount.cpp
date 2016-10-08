@@ -1,4 +1,5 @@
 #include<cmath>
+#include<iostream>
 #include "BankAccount.h"
 
 BankAccount::BankAccount(double initialBalance, int initialAccountNumber) {
@@ -34,8 +35,14 @@ double BankAccount::getBalance() const {
 }
 
 void BankAccount::printInfo() const {
+  toOstream(cout);
 }
 
 void BankAccount::setBalance(int newBalance) {
   balance = newBalance;
+}
+
+void BankAccount::toOstream(ostream &ostrm) const {
+  // Runs a loop and outputs a line to an ostream object
+  ostrm << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
 }
