@@ -40,3 +40,7 @@ void SavingsAccount::setInterestRate(double input) {
 double SavingsAccount::getInterestRate() {
   return interestRate;
 }
+
+void SavingsAccount::printInfo() const {
+
+}

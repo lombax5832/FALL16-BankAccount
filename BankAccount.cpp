@@ -41,8 +41,3 @@ double BankAccount::getBalance() const {
 void BankAccount::printInfo() const {
   toOstream(cout);
 }
-
-void BankAccount::toOstream(ostream &ostrm) const {
-  // Runs a loop and outputs a line to an ostream object
-  ostrm << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
-}

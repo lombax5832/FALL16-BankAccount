@@ -27,5 +27,4 @@ public:
 private:
   int accountNumber;
   double balance;
-  void toOstream(ostream &ostrm) const;
 };

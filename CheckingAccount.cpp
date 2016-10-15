@@ -46,3 +46,6 @@ double CheckingAccount::getMinimumBalance() {
 double CheckingAccount::getServiceFee() {
   return serviceFee;
 }
+
+void CheckingAccount::printInfo() const {
+}
