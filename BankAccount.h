@@ -28,6 +28,6 @@ private:
   int accountNumber;
   double balance;
 
-  void setBalance(int newBalance);
+  void setBalance(double newBalance);
   void toOstream(ostream &ostrm) const;
 };

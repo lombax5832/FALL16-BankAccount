@@ -38,7 +38,7 @@ void BankAccount::printInfo() const {
   toOstream(cout);
 }
 
-void BankAccount::setBalance(int newBalance) {
+void BankAccount::setBalance(double newBalance) {
   balance = newBalance;
 }
 
