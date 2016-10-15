@@ -8,13 +8,9 @@ public:
 
   void postInterest();
 
-  bool withdraw(double input);
-
-  void deposit(double input);
-
   void setInterestRate(double input);
 
-  double getInterestRate();
+  double getInterestRate() const;
 
   void printInfo() const;
 private:

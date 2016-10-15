@@ -16,31 +16,16 @@ void SavingsAccount::postInterest() {
   setBalance(getBalance()*(1.0 + getInterestRate()));
 }
 
-bool SavingsAccount::withdraw(double input) {
-  if (getBalance() < input) {
-    return false;
-  }
-
-  setBalance(getBalance() - input);
-  return true;
-}
-
-void SavingsAccount::deposit(double input) {
-  if (input < 0) {
-    cout << "Invalid deposit amount (Cannot be negative)\n";
-    exit(1);
-  }
-  setBalance(getBalance() + input);
-}
-
 void SavingsAccount::setInterestRate(double input) {
   interestRate = input;
 }
 
-double SavingsAccount::getInterestRate() {
+double SavingsAccount::getInterestRate() const {
   return interestRate;
 }
 
 void SavingsAccount::printInfo() const {
   cout << "--Savings Account--" << endl;
+  cout << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
+  cout << "Interest Rate: " << getInterestRate()*100.0 << "%" << endl;
 }

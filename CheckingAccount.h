@@ -10,7 +10,7 @@ public:
 
   void postInterest();
 
-  bool writeCheck(double value, int toAccNum);
+  bool writeCheck(double value);
 
   void setInterestRate(double input);
 
@@ -18,13 +18,13 @@ public:
 
   void setServiceFee(double input);
 
-  double getInterestRate();
+  double getInterestRate() const;
 
-  double getMinimumBalance();
+  double getMinimumBalance() const;
 
-  double getServiceFee();
+  double getServiceFee() const;
 
-  bool isBalanceValid();
+  bool isBalanceValid() const;
 
   void printInfo() const;
 private:

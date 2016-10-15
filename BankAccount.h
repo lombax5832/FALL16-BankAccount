@@ -14,8 +14,8 @@ public:
    Returns:  true if balance was greater than or equal to
                amount withdrawn, false otherwise
  */
-  bool withdrawFunds(double toWithdraw);
-  void depositFunds(double toDeposit);
+  bool withdraw(double toWithdraw);
+  void deposit(double toDeposit);
 
   void setAccountNumber(int newAccountNumber);
   void setBalance(double newBalance);

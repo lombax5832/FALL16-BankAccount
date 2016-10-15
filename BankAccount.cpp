@@ -7,19 +7,21 @@ BankAccount::BankAccount(double initialBalance, int initialAccountNumber) {
   setAccountNumber(initialAccountNumber);
 }
 
-bool BankAccount::withdrawFunds(double toWithdraw) {
-  if (getBalance() < toWithdraw) {
+bool BankAccount::withdraw(double input) {
+  if (getBalance() < input) {
     return false;
-  } else {
-    setBalance(getBalance() - toWithdraw);
-    return true;
   }
+
+  setBalance(getBalance() - input);
+  return true;
 }
 
-void BankAccount::depositFunds(double toDeposit) {
-  if (toDeposit > 0) {
-    setBalance(getBalance() + toDeposit);
+void BankAccount::deposit(double input) {
+  if (input < 0) {
+    cout << "Invalid deposit amount (Cannot be negative)\n";
+    exit(1);
   }
+  setBalance(getBalance() + input);
 }
 
 void BankAccount::setAccountNumber(int newAccountNumber) {

@@ -20,8 +20,8 @@ void CheckingAccount::postInterest() {
   setBalance(getBalance()*(1.0 + getInterestRate()));
 }
 
-bool CheckingAccount::writeCheck(double value, int toAccNum) {
-  return false;
+bool CheckingAccount::writeCheck(double value) {
+  return withdraw(value);
 }
 
 void CheckingAccount::setInterestRate(double input) {
@@ -36,23 +36,26 @@ void CheckingAccount::setServiceFee(double input) {
   serviceFee = max(input, 0.0);
 }
 
-double CheckingAccount::getInterestRate() {
+double CheckingAccount::getInterestRate() const {
   return interestRate;
 }
 
-double CheckingAccount::getMinimumBalance() {
+double CheckingAccount::getMinimumBalance() const {
   return minimumBalance;
 }
 
-double CheckingAccount::getServiceFee() {
+double CheckingAccount::getServiceFee() const {
   return serviceFee;
 }
 
-bool CheckingAccount::isBalanceValid() {
+bool CheckingAccount::isBalanceValid() const {
   return (getBalance() >= getMinimumBalance());
 }
 
 void CheckingAccount::printInfo() const {
   cout << "--Checking Account--" << endl;
   cout << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
+  cout << "Interest Rate: " << getInterestRate()*100.0 << "%" << endl;
+  cout << "Minimum Balance: " << getMinimumBalance() 
+    << " Service Fee: " << getServiceFee() << endl;
 }
