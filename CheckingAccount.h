@@ -7,7 +7,7 @@ public:
 
   bool isBalanceValid();
 
-  double postInterest();
+  void postInterest();
 
   void setInterestRate(double input);
 

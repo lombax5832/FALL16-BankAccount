@@ -26,6 +26,10 @@ void BankAccount::setAccountNumber(int newAccountNumber) {
   accountNumber = abs(newAccountNumber);
 }
 
+void BankAccount::setBalance(double newBalance) {
+  balance = newBalance;
+}
+
 int BankAccount::getAccountNumber() const {
   return accountNumber;
 }
@@ -36,10 +40,6 @@ double BankAccount::getBalance() const {
 
 void BankAccount::printInfo() const {
   toOstream(cout);
-}
-
-void BankAccount::setBalance(double newBalance) {
-  balance = newBalance;
 }
 
 void BankAccount::toOstream(ostream &ostrm) const {

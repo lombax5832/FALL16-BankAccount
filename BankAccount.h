@@ -18,16 +18,14 @@ public:
   void depositFunds(double toDeposit);
 
   void setAccountNumber(int newAccountNumber);
+  void setBalance(double newBalance);
 
   int getAccountNumber() const;
   double getBalance() const;
 
   void printInfo() const;
-
 private:
   int accountNumber;
   double balance;
-
-  void setBalance(double newBalance);
   void toOstream(ostream &ostrm) const;
 };
