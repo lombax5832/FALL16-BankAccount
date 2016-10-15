@@ -1,4 +1,4 @@
-using namespace std;
+using  namespace std;
 class BankAccount {
 public:
   BankAccount(double initialBalance = 0, int initialAccountNumber = 0);
