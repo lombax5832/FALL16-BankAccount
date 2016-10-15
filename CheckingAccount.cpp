@@ -1,8 +1,9 @@
 #include "CheckingAccount.h"
 #include<algorithm>
+#include<iostream>
 
 CheckingAccount::CheckingAccount(
-  double initialBalance, 
+  double initialBalance,
   int initialAccountNumber,
   double initialInterestRate,
   double initialMinimumBalance,
@@ -15,12 +16,12 @@ CheckingAccount::CheckingAccount(
   setServiceFee(initialServiceFee);
 }
 
-bool CheckingAccount::isBalanceValid() {
-  return (getBalance() >= getMinimumBalance());
-}
-
 void CheckingAccount::postInterest() {
   setBalance(getBalance()*(1.0 + getInterestRate()));
+}
+
+bool CheckingAccount::writeCheck(double value, int toAccNum) {
+  return false;
 }
 
 void CheckingAccount::setInterestRate(double input) {
@@ -47,5 +48,11 @@ double CheckingAccount::getServiceFee() {
   return serviceFee;
 }
 
+bool CheckingAccount::isBalanceValid() {
+  return (getBalance() >= getMinimumBalance());
+}
+
 void CheckingAccount::printInfo() const {
+  cout << "--Checking Account--" << endl;
+  cout << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
 }

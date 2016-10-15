@@ -8,9 +8,9 @@ public:
     double initialMinimumBalance = 0,
     double initialServiceFee = 0);
 
-  bool isBalanceValid();
-
   void postInterest();
+
+  bool writeCheck(double value, int toAccNum);
 
   void setInterestRate(double input);
 
@@ -23,6 +23,8 @@ public:
   double getMinimumBalance();
 
   double getServiceFee();
+
+  bool isBalanceValid();
 
   void printInfo() const;
 private:

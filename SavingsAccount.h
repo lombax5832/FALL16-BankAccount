@@ -5,7 +5,7 @@ public:
     double initialBalance = 0,
     int initialAccountNumber = 0,
     double initialInterestRate = 0);
-  
+
   void postInterest();
 
   bool withdraw(double input);

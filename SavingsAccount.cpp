@@ -17,7 +17,7 @@ void SavingsAccount::postInterest() {
 }
 
 bool SavingsAccount::withdraw(double input) {
-  if (getBalance() < input){
+  if (getBalance() < input) {
     return false;
   }
 
@@ -42,5 +42,5 @@ double SavingsAccount::getInterestRate() {
 }
 
 void SavingsAccount::printInfo() const {
-
+  cout << "--Savings Account--" << endl;
 }
