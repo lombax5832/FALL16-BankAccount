@@ -23,7 +23,7 @@ public:
   int getAccountNumber() const;
   double getBalance() const;
 
-  void printInfo() const;
+  virtual void printInfo() const;
 private:
   int accountNumber;
   double balance;

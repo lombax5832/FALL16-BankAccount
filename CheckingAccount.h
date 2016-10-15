@@ -23,6 +23,8 @@ public:
   double getMinimumBalance();
 
   double getServiceFee();
+
+  void printInfo() const;
 private:
   double interestRate;
   double minimumBalance;

@@ -20,7 +20,7 @@ bool CheckingAccount::isBalanceValid() {
 }
 
 void CheckingAccount::postInterest() {
-  setBalance(getBalance() - getBalance()*getInterestRate());
+  setBalance(getBalance()*(1.0 + getInterestRate()));
 }
 
 void CheckingAccount::setInterestRate(double input) {
