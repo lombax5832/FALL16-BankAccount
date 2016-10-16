@@ -35,6 +35,11 @@ void BankAccount::setAccountNumber(int newAccountNumber) {
 }
 
 void BankAccount::setBalance(double newBalance) {
+  if (newBalance < 0) {
+    cout << "Invalid amount (Cannot be negative)\n";
+    exit(1);
+  }
+
   balance = newBalance;
 }
 

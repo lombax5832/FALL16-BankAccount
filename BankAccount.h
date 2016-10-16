@@ -36,9 +36,31 @@ public:
          newAccountNumber: the new accountNumber
  */
   void setAccountNumber(int newAccountNumber);
+
+  /*
+   Description:  Sets balance of the account
+   Pre:	Initialized, positive double
+   Post:	Funds deposited will be added to the current balance
+          Program will exit if negative is inserted.
+   Parameters:
+         newBalance: the new account balance
+ */
   void setBalance(double newBalance);
 
+  /*
+   Description:  Returns the account number
+   Pre:	Properly initialized object
+   Post:  Account Number will be returned
+   Returns:  current value of accountNumber
+ */
   int getAccountNumber() const;
+
+  /*
+   Description:  Returns the account balance
+   Pre:	Properly initialized object
+   Post:  Account Balance will be returned
+   Returns:  current value of balance
+ */
   double getBalance() const;
 
   virtual void printInfo() const;
