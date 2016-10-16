@@ -54,8 +54,8 @@ bool CheckingAccount::isBalanceValid() const {
 
 void CheckingAccount::printInfo() const {
   cout << "--Checking Account--" << endl;
-  cout << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
+  cout << "Account #: " << getAccountNumber() << " Balance: $" << getBalance() << endl;
   cout << "Interest Rate: " << getInterestRate()*100.0 << "%" << endl;
-  cout << "Minimum Balance: " << getMinimumBalance() 
-    << " Service Fee: " << getServiceFee() << endl;
+  cout << "Minimum Balance: $" << getMinimumBalance() 
+    << " Service Fee: $" << getServiceFee() << endl << endl;
 }

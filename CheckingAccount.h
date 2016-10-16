@@ -1,4 +1,4 @@
-#include"BankAccount.h";
+#include"BankAccount.h"
 class CheckingAccount : public BankAccount {
 public:
   CheckingAccount(

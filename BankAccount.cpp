@@ -8,6 +8,11 @@ BankAccount::BankAccount(double initialBalance, int initialAccountNumber) {
 }
 
 bool BankAccount::withdraw(double input) {
+  if (input < 0) {
+    cout << "Invalid amount (Cannot be negative)\n";
+    exit(1);
+  }
+
   if (getBalance() < input) {
     return false;
   }
@@ -18,9 +23,10 @@ bool BankAccount::withdraw(double input) {
 
 void BankAccount::deposit(double input) {
   if (input < 0) {
-    cout << "Invalid deposit amount (Cannot be negative)\n";
+    cout << "Invalid amount (Cannot be negative)\n";
     exit(1);
   }
+
   setBalance(getBalance() + input);
 }
 
@@ -42,5 +48,5 @@ double BankAccount::getBalance() const {
 
 void BankAccount::printInfo() const {
   cout << "--Bank Account--" << endl;
-  cout << "Account #: " << getAccountNumber() << " Balance: " << getBalance() << endl;
+  cout << "Account #: " << getAccountNumber() << " Balance: $" << getBalance() << endl << endl;
 }
