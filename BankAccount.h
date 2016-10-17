@@ -1,5 +1,6 @@
 #pragma once
-using  namespace std;
+using namespace std;
+
 class BankAccount {
 public:
   // Includes Default Constructor

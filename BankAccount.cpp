@@ -53,5 +53,6 @@ double BankAccount::getBalance() const {
 
 void BankAccount::printInfo() const {
   cout << "--Bank Account--" << endl;
-  cout << "Account #: " << getAccountNumber() << " Balance: $" << getBalance() << endl << endl;
+  cout << "Account #: " << getAccountNumber() << " Balance: $" << getBalance() 
+    << endl << endl;
 }
