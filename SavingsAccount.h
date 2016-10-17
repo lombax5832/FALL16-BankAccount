@@ -12,7 +12,7 @@ public:
                    based on interest
    Pre:	Properly initialized object
    Post:	Account balance will be changed based on interest
- */
+  */
   void postInterest();
 
   /*
@@ -20,10 +20,8 @@ public:
    Pre:	Properly initialized object
    Post:	Account's interest rate will be changed to given value
    Parameters:
-         input: New interest rate, for 12%, enter 0.12
-   Returns:  true if balance was greater than or equal to
-               amount withdrawn, false otherwise
- */
+         input: New interest rate, for 12%, enter 0.12e
+  */
   void setInterestRate(double input);
 
   /*
@@ -31,7 +29,7 @@ public:
    Pre:	Properly initialized object
    Post:	Account's interest rate will be returned as a double
    Returns:  value of the current interest rate
- */
+  */
   double getInterestRate() const;
 
   /*
@@ -39,7 +37,7 @@ public:
    Pre:	Properly initialized object
    Post:	Will print the account number, balance and interest rate
             of the account
- */
+  */
   void printInfo() const;
 private:
   double interestRate;

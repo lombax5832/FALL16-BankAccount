@@ -18,7 +18,7 @@ public:
          toWithdraw: amount of funds to withdraw
    Returns:  true if balance was greater than or equal to
                amount withdrawn, false otherwise
- */
+  */
   bool withdraw(double toWithdraw);
 
   /*
@@ -28,7 +28,7 @@ public:
           Program will exit if negative is inserted.
    Parameters:
          toDeposit: amount of funds to deposit
- */
+  */
   void deposit(double toDeposit);
 
   /*
@@ -37,7 +37,7 @@ public:
    Post:	Account number will be changed to the given int
    Parameters:
          newAccountNumber: the new accountNumber
- */
+  */
   void setAccountNumber(int newAccountNumber);
 
   /*
@@ -47,7 +47,7 @@ public:
           Program will exit if negative is inserted.
    Parameters:
          newBalance: the new account balance
- */
+  */
   void setBalance(double newBalance);
 
   /*
@@ -55,7 +55,7 @@ public:
    Pre:	Properly initialized object
    Post:  Account Number will be returned
    Returns:  current value of accountNumber
- */
+  */
   int getAccountNumber() const;
 
   /*
@@ -63,10 +63,15 @@ public:
    Pre:	Properly initialized object
    Post:  Account Balance will be returned
    Returns:  current value of balance
- */
+  */
   double getBalance() const;
 
-  virtual void printInfo() const;
+  /*
+   Description: Prints information about the object
+   Pre:	Properly initialized object
+   Post:	Will print the account number and balance of the account
+  */
+  void printInfo() const;
 private:
   int accountNumber;
   double balance;
