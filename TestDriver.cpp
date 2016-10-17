@@ -19,7 +19,7 @@ int main() {
 
   // Prompt user to input initial balance for a checking account object
   cout << "Please enter an initial balance for a checking account:" << endl;
-  int initialBalance = 0;
+  double initialBalance = 0;
   cin >> initialBalance;
   CheckingAccount checkingAccountTest(initialBalance, 3, 0.12, 50.0, 30.0);
 
@@ -30,11 +30,11 @@ int main() {
   checkingAccountTest.printInfo();
 
   // Prompt user for input and explain loop
-  cout << "Enter a number less than 0 to withdraw and greater than 0 to deposit." 
-    << endl;
+  cout << "Enter a number less than 0 to withdraw and greater" 
+    << " than 0 to deposit." << endl;
   cout << "Enter 0 to stop the loop and calculate interest" << endl << endl;
 
-  int temp;
+  double temp;
   cin >> temp;
 
   while (temp != 0) {

@@ -1,4 +1,5 @@
 #include "SavingsAccount.h"
+
 #include<algorithm>
 #include<iostream>
 
@@ -26,6 +27,8 @@ double SavingsAccount::getInterestRate() const {
 
 void SavingsAccount::printInfo() const {
   cout << "--Savings Account--" << endl;
-  cout << "Account #: " << getAccountNumber() << " Balance: $" << getBalance() << endl;
-  cout << "Interest Rate: " << getInterestRate()*100.0 << "%" << endl << endl;
+  cout << "Account #: " << getAccountNumber() << " Balance: $" 
+    << getBalance() << endl;
+  cout << "Interest Rate: " << getInterestRate()*100.0 << "%" 
+    << endl << endl;
 }
