@@ -2,7 +2,10 @@
 using  namespace std;
 class BankAccount {
 public:
-  BankAccount(double initialBalance = 0, int initialAccountNumber = 0);
+  // Includes Default Constructor
+  BankAccount(
+    double initialBalance = 0,
+    int initialAccountNumber = 0);
 
   /*
    Description:  Attempt to withdraw given amount of funds

@@ -1,6 +1,7 @@
 #include"BankAccount.h"
 class CheckingAccount : public BankAccount {
 public:
+  // Includes Default Constructor
   CheckingAccount(
     double initialBalance = 0,
     int initialAccountNumber = 0,
